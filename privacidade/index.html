@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TVDE Master — Política de privacidade</title>
+<style>
+  body { font-family: Roboto, Arial, sans-serif; max-width: 760px; margin: 0 auto; padding: 16px; line-height: 1.55; color: #1f1f1f; background: #fff; }
+  h1 { font-size: 1.6em; margin-bottom: 0.2em; }
+  h2 { font-size: 1.15em; margin-top: 1.6em; }
+  .data { color: #666; margin-top: 0; }
+  li { margin-bottom: 0.35em; }
+</style>
+</head>
+<body>
+<h1>Política de privacidade — TVDE Master</h1>
+<p class="data">Última atualização: 8 de novembro de 2026</p>
+
+<p>O <b>TVDE Master</b> é uma app Android dirigida a motoristas e operadores de TVDE, que funciona com todas as
+plataformas de TVDE ativas em Portugal Continental (hoje: Uber, Bolt, VLOZ e POP). Junta numa lista as ofertas de
+viagem que aparecem nas apps de motorista e mostra o €/km e o €/hora de cada uma. A app é distribuída apenas a
+motoristas convidados pela <b>Bigode Magnético</b>, que é a responsável pelo tratamento dos dados descritos aqui.</p>
+
+<h2>1. Serviço de acessibilidade</h2>
+<p>A app usa o serviço de acessibilidade do Android (API AccessibilityService) para ler as ofertas no ecrã das apps
+de motorista. Não é uma ferramenta de acessibilidade para pessoas com deficiência. O serviço só é ligado pelo
+próprio motorista, depois de aceitar o aviso de privacidade dentro da app, e pode ser desligado a qualquer momento
+nas definições de acessibilidade do Android.</p>
+<ul>
+  <li>A app lê o ecrã das apps Uber, Bolt, VLOZ e POP quando aparece uma oferta: valor, categoria, tempos,
+    distâncias e moradas de recolha e de destino.</li>
+  <li>Enquanto há uma oferta da Uber à vista, a app tira imagens do ecrã e lê o texto no próprio telemóvel
+    (reconhecimento de texto sem ligação à Internet). A imagem é descartada logo a seguir.</li>
+  <li>O conteúdo das outras apps é ignorado e não é guardado.</li>
+  <li>A app não aceita nem recusa ofertas e não carrega em botões nem escreve noutras apps.</li>
+</ul>
+
+<h2>2. Dados guardados no telemóvel</h2>
+<ul>
+  <li><b>Registo das ofertas recebidas</b>, para a lista da app. Fica só no telemóvel até a app ser desinstalada
+    ou os seus dados serem apagados.</li>
+  <li><b>Capturas de diagnóstico</b> (desligadas por defeito): se o motorista as ligar, a app guarda o texto e
+    imagens das ofertas para melhorar a leitura. Podem conter moradas e nomes de passageiros. Apagam-se sozinhas
+    ao fim de 3 dias (prazo ajustável) e só saem do telemóvel se o motorista as exportar, ou nas contas de teste
+    (ver abaixo).</li>
+</ul>
+<p><b>Na versão distribuída pela Google Play, nenhuma imagem do ecrã sai do telemóvel.</b></p>
+<p><b>Contas de teste (só na versão de testes, distribuída fora da Google Play):</b> algumas contas, marcadas pela
+Bigode Magnético com o acordo do motorista para testar a app, enviam as capturas de diagnóstico (texto e imagens do ecrã das ofertas, que podem conter moradas e nomes de
+passageiros) para uma pasta privada da Bigode Magnético no Google Drive, não partilhada, onde se apagam sozinhas ao
+fim de 7 dias. Servem só para corrigir a leitura das ofertas. As contas normais nunca enviam capturas.</p>
+
+<h2>3. Dados enviados para fora do telemóvel</h2>
+<p><b>Dados da conta:</b> nome, apelido, email e organização, e a password, guardada de forma protegida pelo
+serviço de contas (nunca fica acessível à Bigode Magnético). Quem entra com o Google ou com a Microsoft não cria password. Estes dados
+servem para aprovar e gerir o acesso à app e para responder aos pedidos de suporte. As mensagens enviadas pelo
+formulário de suporte seguem por email para a Bigode Magnético.</p>
+<p><b>Segurança da conta:</b> um identificador deste telemóvel, criado pela app a partir do identificador que o
+Android lhe atribui (não é o número de telefone nem o IMEI), o modelo do telemóvel e a versão da app. Com a versão da
+Google Play, também o resultado da verificação Google Play Integrity (se a app é a original, instalada pela Google Play,
+num telemóvel não alterado). Servem para limitar o número de telemóveis de cada conta (2, salvo outro limite definido
+pela organização), para impedir o uso de cópias alteradas da app e para a licença de uso, que a app renova com o
+servidor e que deixa de valer ao fim de 48 horas sem ligação. Ao terminar a sessão, o telemóvel deixa de contar.</p>
+<p><b>Ofertas:</b> depois de a conta ser aprovada, de cada oferta são enviados:</p>
+<ul>
+  <li>hora, plataforma, categoria, valor, tempos e distâncias, €/km e €/hora;</li>
+  <li>a zona (código postal de 4 dígitos ou localidade) e a rua sem número da recolha e do destino;</li>
+  <li>o nome próprio do motorista (ou o nome definido pela organização para o distinguir).</li>
+</ul>
+<p><b>Fora das contas de teste da versão de testes, nunca são enviados</b> moradas completas, nomes de passageiros, imagens do ecrã, contactos, localização GPS
+do telemóvel nem identificadores de publicidade. Os dados vão por ligação cifrada (HTTPS) para uma folha de cálculo
+Google da Bigode Magnético, alojada na Google (Google Workspace / Apps Script). As contas ficam no Firebase
+Authentication, também da Google. A Google atua como subcontratante.</p>
+
+<h2>4. Para que servem os dados</h2>
+<p>Para mostrar as ofertas ao motorista e, no caso da base de dados partilhada, para a Bigode Magnético estudar o
+mercado TVDE (valores por km e por hora, zonas, plataformas, horários). Os dados não são usados para avaliar o
+desempenho individual de cada motorista, não são vendidos e não são usados para publicidade.</p>
+
+<h2>5. Fundamento e participação</h2>
+<p>O tratamento assenta no consentimento do motorista (artigo 6.º, n.º 1, alínea a) do RGPD), dado no aviso dentro da
+app. A participação é voluntária. O consentimento pode ser retirado a qualquer momento em
+<i>☰ › Definições › Aviso de privacidade</i> ou desligando o serviço de acessibilidade. Retirar o consentimento faz a app
+deixar de ler e de enviar ofertas, sem afetar o tratamento feito antes.</p>
+
+<h2>6. Conservação</h2>
+<p>Os dados da base de dados partilhada são guardados enquanto forem úteis para o estudo do mercado e apagados a
+pedido do motorista. Os dados no telemóvel ficam lá até serem apagados pelo motorista ou pela desinstalação da app.</p>
+
+<h2 id="eliminar">6-A. Eliminar a conta</h2>
+<p>Na app: <i>☰ › Perfil › Eliminar a minha conta</i>. Sem acesso à app, peça a eliminação para o contacto abaixo, a
+partir do email da conta. São apagados de imediato o login, o nome, o apelido, o email e a organização. As ofertas já
+enviadas ficam na base de dados, só com o nome próprio, para o estudo do mercado, salvo se pedir também o seu apagamento
+pelo mesmo contacto.</p>
+
+<h2>7. Direitos</h2>
+<p>Pode pedir o acesso, a retificação ou o apagamento dos seus dados, ou a limitação do tratamento, para o contacto
+abaixo. Também pode apresentar reclamação à Comissão Nacional de Proteção de Dados (CNPD, www.cnpd.pt).</p>
+
+<h2>8. Menores</h2>
+<p>A app destina-se apenas a motoristas TVDE, que são maiores de idade. Não é dirigida a menores.</p>
+
+<h2>9. Alterações</h2>
+<p>Se esta política mudar de forma relevante, a app volta a mostrar o aviso e a pedir o consentimento.</p>
+
+<h2>10. Contacto</h2>
+<p>Bigode Magnético — <a href="mailto:bigodemagnetico@outlook.pt">bigodemagnetico@outlook.pt</a></p>
+</body>
+</html>
